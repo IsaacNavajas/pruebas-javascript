@@ -112,12 +112,26 @@ function aleaotry(){
     if(count >= 2){document.write(`<h2>El numero ${numeromaximo} se repite ${count} veces</h2>`) }
     else if (count = 1){document.write(`<h2>El numero ${numeromaximo} es el numero maximo y no se repite</h2>`) }
 
-    console.info(`el numero mayor se repite en este ciclo  veces`)
-
 }
 
 
 aleaotry()
+
+//============================================================================
+//imprime las diez tablas de multiplicar 
+
+
+let tablaDeMultiplicar = () => {
+    
+    for (let i=1 ; i<= 10; i++){
+        document.write(`<ul> `)
+    for (let j=1 ; j<= 10; j++){
+        document.write(`</li>${i} x ${j} = ${i * j};  </li>`)
+    }
+    document.write(`</ul> `)
+}
+}
+tablaDeMultiplicar()
 
 //============================================================================
 //haz una funcion donde su parametro se pueda evaluar si es palindromo o no
@@ -130,7 +144,7 @@ function palindromo(lectura){
     
     let count = lectura.length;
 
-    for (let i=1; i < count / 2; i++){
+    for (let i=1; i <= count / 2; i++){
         if( lectura[i] != lectura[count-1-i]){
             return document.write(`<h2> - la palabra ${lectura.toLowerCase()} NO es un palindromo</h2>`)
         }
@@ -142,7 +156,3 @@ function palindromo(lectura){
 palindromo("oso")
 palindromo("globo")
 palindromo()
-
-
-//============================================================================
-
